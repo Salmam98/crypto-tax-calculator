@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO meta -->
+    <title>Free Crypto Tax Calculator (2026) | Estimate Capital Gains & Income Tax</title>
+    <meta name="description" content="Free crypto tax calculator. Estimate your cryptocurrency capital gains, staking and DeFi income tax for the US, UK, Canada and Australia in seconds. No sign-up required.">
+    <link rel="canonical" href="https://cryptotaxbit.com/">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#667eea">
+
+    <!-- Icons & manifest -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CryptoTaxBit">
+    <meta property="og:title" content="Free Crypto Tax Calculator (2026) | Capital Gains & Income">
+    <meta property="og:description" content="Estimate your cryptocurrency capital gains, staking and DeFi income tax in seconds. Free, private, no sign-up.">
+    <meta property="og:url" content="https://cryptotaxbit.com/">
+    <meta property="og:image" content="https://cryptotaxbit.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Crypto Tax Calculator (2026)">
+    <meta name="twitter:description" content="Estimate your crypto capital gains and income tax in seconds. Free, no sign-up.">
+    <meta name="twitter:image" content="https://cryptotaxbit.com/og-image.png">
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://cryptotaxbit.com/#org",
+          "name": "CryptoTaxBit",
+          "url": "https://cryptotaxbit.com/",
+          "logo": "https://cryptotaxbit.com/favicon.png"
+        },
+        {
+          "@type": "WebApplication",
+          "name": "CryptoTaxBit Crypto Tax Calculator",
+          "url": "https://cryptotaxbit.com/",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any (web browser)",
+          "description": "Free crypto tax calculator to estimate cryptocurrency capital gains, staking and DeFi income tax for the US, UK, Canada and Australia.",
+          "publisher": { "@id": "https://cryptotaxbit.com/#org" },
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How is cryptocurrency taxed?",
+              "acceptedAnswer": { "@type": "Answer", "text": "In most countries, selling, swapping or spending crypto is a taxable event subject to capital gains tax. Crypto earned from staking, mining, interest or as payment is usually taxed as income at your ordinary rate." }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I have to pay tax if I only hold crypto?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No. Simply buying and holding cryptocurrency is generally not a taxable event. Tax is typically triggered when you dispose of crypto by selling, trading, or spending it, or when you receive crypto as income." }
+            },
+            {
+              "@type": "Question",
+              "name": "Is this crypto tax calculator free?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. The CryptoTaxBit calculator is completely free to use, requires no sign-up, and runs entirely in your browser so your figures stay private." }
+            },
+            {
+              "@type": "Question",
+              "name": "What cost basis method does the calculator use?",
+              "acceptedAnswer": { "@type": "Answer", "text": "This tool gives a simplified estimate based on your total gains and income. For exact filing you should track each disposal using an accepted cost basis method such as FIFO, LIFO or HIFO, and consult a tax professional." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a class="brand" href="/"><img src="/favicon.png" alt="CryptoTaxBit logo" width="28" height="28"> CryptoTaxBit</a>
+            <nav aria-label="Primary">
+                <a href="#calculator">Calculator</a>
+                <a href="#how-it-works">How crypto tax works</a>
+                <a href="/guides/">Guides</a>
+                <a href="/about.html">About</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <h1 class="center">Free Crypto Tax Calculator</h1>
+            <p class="subtitle center">Estimate your cryptocurrency capital gains and income tax in seconds &mdash; free, private, and no sign-up required.</p>
+        </header>
+
+        <main>
+            <section id="calculator" aria-labelledby="calc-heading">
+                <h2 id="calc-heading">Calculate your crypto tax estimate</h2>
+                <p>Enter your figures below to get a quick estimate of what you may owe on your cryptocurrency activity. All calculations run in your browser &mdash; nothing is sent to a server.</p>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country">
+                        <option value="">Select Country</option>
+                        <option value="us">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="canada">Canada</option>
+                        <option value="australia">Australia</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="gains">Capital Gains (sales, swaps, spending)</label>
+                    <input type="number" id="gains" placeholder="0" min="0" step="0.01">
+                </div>
+
+                <div class="form-group">
+                    <label for="staking">Staking / Interest Income</label>
+                    <input type="number" id="staking" placeholder="0" min="0" step="0.01">
+                </div>
+
+                <div class="form-group">
+                    <label for="freelance">Freelance / Crypto Payment Income</label>
+                    <input type="number" id="freelance" placeholder="0" min="0" step="0.01">
+                </div>
+
+                <div class="form-group">
+                    <label for="losses">Losses (Deductible)</label>
+                    <input type="number" id="losses" placeholder="0" min="0" step="0.01">
+                </div>
+
+                <button onclick="calculateTax()">Calculate Tax</button>
+
+                <div class="results" id="results">
+                    <div class="result-item">
+                        <span>Total Taxable Amount:</span>
+                        <span class="result-value"><span id="taxable">0.00</span></span>
+                    </div>
+                    <div class="result-item">
+                        <span>Estimated Tax:</span>
+                        <span class="result-value"><span id="tax">0.00</span></span>
+                    </div>
+                    <div class="result-item">
+                        <span>Quarterly Payment:</span>
+                        <span class="result-value"><span id="quarterly">0.00</span></span>
+                    </div>
+                    <div class="result-item">
+                        <span>Monthly Set-Aside:</span>
+                        <span class="result-value"><span id="monthly">0.00</span></span>
+                    </div>
+                </div>
+
+                <div class="disclaimer">
+                    <strong>&#9878; Disclaimer:</strong> This is a simplified estimate only and not professional tax advice. Tax rates change yearly and depend on your full financial situation. Always consult a qualified tax professional before filing.
+                </div>
+            </section>
+
+            <section id="how-it-works" aria-labelledby="how-heading">
+                <h2 id="how-heading">How is cryptocurrency taxed?</h2>
+                <p>Most tax authorities treat cryptocurrency as property rather than currency. That means two main types of tax can apply to your crypto activity:</p>
+                <ul>
+                    <li><strong>Capital gains tax</strong> &mdash; charged when you dispose of crypto by selling it, swapping one coin for another, or spending it. Your gain is the difference between what you received and your original cost basis.</li>
+                    <li><strong>Income tax</strong> &mdash; charged when you receive crypto as earnings, for example from staking rewards, mining, interest, airdrops, or being paid in crypto. This is usually taxed at your ordinary income rate.</li>
+                </ul>
+                <p>Simply buying and holding crypto is generally <strong>not</strong> taxable. Tax is triggered when you dispose of it or earn it.</p>
+
+                <h3>Short-term vs long-term gains</h3>
+                <p>In the United States, crypto held for one year or less is taxed at higher short-term rates equal to your ordinary income bracket, while crypto held longer than a year qualifies for lower long-term capital gains rates. In Canada and Australia, capital gains discounts may apply, and in the UK an annual capital gains allowance is available.</p>
+
+                <h3>Learn more</h3>
+                <div class="card-grid">
+                    <a class="card" href="/guides/crypto-staking-tax.html"><h3>Crypto staking tax</h3><p>How staking rewards are taxed and when.</p></a>
+                    <a class="card" href="/guides/fifo-lifo-hifo-crypto.html"><h3>FIFO vs LIFO vs HIFO</h3><p>Choosing a cost basis method.</p></a>
+                    <a class="card" href="/guides/crypto-tax-loss-harvesting.html"><h3>Tax-loss harvesting</h3><p>Legally reduce your crypto tax bill.</p></a>
+                    <a class="card" href="/guides/"><h3>All guides</h3><p>Browse every crypto tax guide.</p></a>
+                </div>
+            </section>
+
+            <section id="faq" aria-labelledby="faq-heading">
+                <h2 id="faq-heading">Frequently asked questions</h2>
+                <details>
+                    <summary>How is cryptocurrency taxed?</summary>
+                    <p>In most countries, selling, swapping or spending crypto is a taxable event subject to capital gains tax. Crypto earned from staking, mining, interest or as payment is usually taxed as income at your ordinary rate.</p>
+                </details>
+                <details>
+                    <summary>Do I have to pay tax if I only hold crypto?</summary>
+                    <p>No. Simply buying and holding cryptocurrency is generally not a taxable event. Tax is typically triggered when you dispose of crypto by selling, trading, or spending it, or when you receive crypto as income.</p>
+                </details>
+                <details>
+                    <summary>Is this crypto tax calculator free?</summary>
+                    <p>Yes. The CryptoTaxBit calculator is completely free to use, requires no sign-up, and runs entirely in your browser so your figures stay private.</p>
+                </details>
+                <details>
+                    <summary>What cost basis method does the calculator use?</summary>
+                    <p>This tool gives a simplified estimate based on your total gains and income. For exact filing you should track each disposal using an accepted cost basis method such as FIFO, LIFO or HIFO, and consult a tax professional.</p>
+                </details>
+            </section>
+        </main>
+
+        <footer>
+            <p>CryptoTaxBit provides free educational crypto tax estimates. It is not a substitute for professional tax advice.</p>
+            <nav aria-label="Footer">
+                <a href="/about.html">About</a>
+                <a href="/guides/">Guides</a>
+                <a href="/privacy.html">Privacy</a>
+            </nav>
+        </footer>
+    </div>
+
+    <script>
+        function calculateTax() {
+            const country = document.getElementById('country').value;
+            if (!country) { alert('Please select a country'); return; }
+
+            const gains = parseFloat(document.getElementById('gains').value) || 0;
+            const staking = parseFloat(document.getElementById('staking').value) || 0;
+            const freelance = parseFloat(document.getElementById('freelance').value) || 0;
+            const losses = parseFloat(document.getElementById('losses').value) || 0;
+
+            const totalIncome = gains + staking + freelance;
+            const taxable = Math.max(0, totalIncome - losses);
+
+            let tax = 0;
+            if (country === 'us') {
+                if (taxable <= 11600) tax = taxable * 0.10;
+                else if (taxable <= 47150) tax = 1160 + (taxable - 11600) * 0.12;
+                else tax = 5426 + (taxable - 47150) * 0.22;
+                tax += taxable * 0.05; // estimated state tax
+                if (freelance > 0) tax += freelance * 0.153; // self-employment tax
+            } else if (country === 'uk') {
+                // simplified: 20% on gains above allowance, 20% basic income
+                const cgAllowance = 3000;
+                const taxableGains = Math.max(0, (gains - losses)) ;
+                tax = Math.max(0, taxableGains - cgAllowance) * 0.20;
+                tax += (staking + freelance) * 0.20;
+            } else if (country === 'australia') {
+                // simplified flat estimate
+                tax = taxable * 0.325;
+            } else { // canada
+                if (taxable <= 55867) tax = taxable * 0.15;
+                else if (taxable <= 111733) tax = 8380 + (taxable - 55867) * 0.205;
+                else tax = 19630 + (taxable - 111733) * 0.26;
+                tax += taxable * 0.08; // estimated provincial tax
+            }
+
+            const quarterly = tax / 4;
+            const monthly = tax / 12;
+
+            document.getElementById('taxable').textContent = taxable.toFixed(2);
+            document.getElementById('tax').textContent = tax.toFixed(2);
+            document.getElementById('quarterly').textContent = quarterly.toFixed(2);
+            document.getElementById('monthly').textContent = monthly.toFixed(2);
+            document.getElementById('results').classList.add('show');
+        }
+    </script>
+</body>
+</html>

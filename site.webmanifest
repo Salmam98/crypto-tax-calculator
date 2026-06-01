@@ -1,0 +1,12 @@
+{
+  "name": "CryptoTaxBit - Free Crypto Tax Calculator",
+  "short_name": "CryptoTaxBit",
+  "description": "Free crypto tax calculator to estimate capital gains and income tax.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#667eea",
+  "icons": [
+    { "src": "/favicon.png", "sizes": "64x64", "type": "image/png" }
+  ]
+}
